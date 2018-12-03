@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DEPRECIACION2._0
 {
-    public partial class BUSCAR_RUBRO : Form
+    public partial class BUSCAR_PERSONAL : Form
     {
         private SqlConnection sqlCon;
         private SqlCommand sqlCmd;
@@ -20,10 +20,10 @@ namespace DEPRECIACION2._0
         private SqlDataAdapter sqlDa;
         private Boolean editando;
 
-
-        public BUSCAR_RUBRO()
+        public BUSCAR_PERSONAL()
         {
             InitializeComponent();
+
             String instancia = "CORCHO";
             String bd = "sis325";
 
@@ -46,14 +46,10 @@ namespace DEPRECIACION2._0
             Close();
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
         private void buscar()
         {
-            var query = "select * from rubro WHERE descripcion='" + txtDescripcion.Text + "'";
+            var query = "select * from recursosHumanos WHERE CiPersonal='" + txtDescripcion.Text + "'";
             using (SqlCommand cmd = new SqlCommand(query, sqlCon))
             {
                 SqlDataReader read = cmd.ExecuteReader();
@@ -61,16 +57,19 @@ namespace DEPRECIACION2._0
                 {
                     while (read.Read())
                     {
-                        lbCodRubro.Text = read["id_rubro"].ToString();
-                        lbDescripcion.Text = read["descripcion"].ToString();
-                        lbVidaUtil.Text = read["vida_util"].ToString();
-                        lbCoeficiente.Text = read["Porc_DEPRECIACION"].ToString();
-                        lbTotal.Text = read["total"].ToString();
+                        lbCi.Text = read["CiPersonal"].ToString();
+                        lbProcedencia.Text = read["procedencia"].ToString();
+                        lbNombres.Text = read["Nombres"].ToString();
+                        lbPaterno.Text = read["ApellidoPat"].ToString();
+                        lbMaterno.Text = read["ApellidoMat"].ToString();
+                        lbCargo.Text = read["Cargo"].ToString();
+                        lbDireccion.Text = read["Dir"].ToString();
+                        lbEmail.Text = read["Email"].ToString();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("no se encontro dicho rubro");
+                    MessageBox.Show("NO SE ENCONTRO EL PERSONAL CON EL CI "+txtDescripcion.Text);
                     pnlDescripcion.Visible = false;
                 }
             }
@@ -80,14 +79,13 @@ namespace DEPRECIACION2._0
         {
             buscar();
             pnlDescripcion.Visible = true;
-            
-
         }
 
-        private void BUSCAR_RUBRO_Load(object sender, EventArgs e)
+        private void lbNombres_Click(object sender, EventArgs e)
         {
 
         }
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -99,6 +97,11 @@ namespace DEPRECIACION2._0
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -38,6 +38,7 @@
             System.Windows.Forms.Label profesLabel;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label cargoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recursosHumanos));
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,6 +57,8 @@
             this.cargoComboBox = new System.Windows.Forms.ComboBox();
             this.procedenciaComboBox = new System.Windows.Forms.ComboBox();
             this.recursosHumanosDataGridView = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             sexoLabel = new System.Windows.Forms.Label();
             idClienteLabel = new System.Windows.Forms.Label();
             ciPersonalLabel = new System.Windows.Forms.Label();
@@ -67,6 +70,8 @@
             emailLabel = new System.Windows.Forms.Label();
             cargoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.recursosHumanosDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sexoLabel
@@ -372,11 +377,34 @@
             this.recursosHumanosDataGridView.TabIndex = 49;
             this.recursosHumanosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.recursosHumanosDataGridView_CellContentClick_1);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1026, 40);
+            this.panel1.TabIndex = 85;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(986, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // recursosHumanos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 865);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -410,6 +438,8 @@
             this.Text = "recursosHumanos";
             this.Load += new System.EventHandler(this.recursosHumanos_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.recursosHumanosDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +465,7 @@
         private System.Windows.Forms.ComboBox cargoComboBox;
         private System.Windows.Forms.ComboBox procedenciaComboBox;
         private System.Windows.Forms.DataGridView recursosHumanosDataGridView;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

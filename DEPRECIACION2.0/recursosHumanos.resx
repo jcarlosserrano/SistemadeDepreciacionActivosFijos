@@ -147,4 +147,22 @@
   <metadata name="cargoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAApxJREFUaEPt2jur1EAYxvF4rxUUBbVVC0FQUEQQK/Uj6NcQROzUr2CrpYKd90bF
+        1kY7OWCjKGqjCF7x/n/CzpKz583suzMjm5HzwK9JJtl9yO4k2U3Tk804hQd4hR/4M0e/8QaPcB474coa
+        XMBHWDseil+4hA3ozXroiFg7GKpn2IElWYv7sDYauhfYiEU5B2twLW5hHE0An2ANrMkRtNFsZg2ozRW0
+        qW0i6PMBq9C8HC34H+jr03zvLKjdPpgranUI5opaLRfq8w6fJ5Z5/cTriWWpihS6hnXYioXRMi9NtXoT
+        K3B2tCxHdiGVWY2QLfCWUpkD6OY0rLFeWYUmy4R4SlllQnJKJRd6D33M+hIrFSsTcg/WttMkF/qCbYjF
+        KuUpo1uZp+hu55X1kdOb1ZuOpVtKZfYjFpW5icnX8sqeFLyl9FuAp4zua6zX8couJJ5SmpZjKVFGihQS
+        T6m+lCojxQpJSimVuQ1rfymKFpJZSpUuI8ULiSYATy7C2j5H8UKeqTlER1JH1NpPqqKFZikTUrpUsUIp
+        ZUJKlipSKKdMSKlS2YW8lzOaAKbNfiVKZRXylglTs97svy6VXEi3zQcRi3We8ZbSf0Hd7bySC+kFY4md
+        ND2lbsDadpqsj9wZWPFcAcRKHUXqj5/Zk4Jul7vxlAmsUsfwFdZ4j+xCEo7ULGWCbqncMlKkkDxE6m2z
+        vo/XUeI39mKFhmK50NC1hfRQg7WyRu2Vy9vOgtptR3uHaa2szTfo1NE+O2MNqM0dtNkFXWxag2pyAuNc
+        hjWoFk+wEuPoqSY9CGQNHjo9ObYbS6Knmp7D2mioVOY4erMJs15gzstjmEfGymFchW6zrZ3Ni6bmuziJ
+        Rd8Zb7SRLu/3YO+c6aTZnmf60zR/AQSTpXUNBj9+AAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

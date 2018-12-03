@@ -190,6 +190,11 @@ namespace DEPRECIACION2._0
             areaTextBox.Focus();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         
     }
 }

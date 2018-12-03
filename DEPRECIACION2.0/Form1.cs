@@ -109,6 +109,7 @@ namespace DEPRECIACION2._0
         private void rptDepresiacion_Click(object sender, EventArgs e)
         {
             subMenuReportes.Visible = false;
+            AbrirFormulario(new DEPRECIACION());
         }
 
         private void rptPersonal_Click(object sender, EventArgs e)
@@ -126,7 +127,7 @@ namespace DEPRECIACION2._0
             Application.Exit();
         }
 
-        private void AbrirFormulario(object Formulario)
+        public void AbrirFormulario(object Formulario)
         {
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
@@ -369,6 +370,24 @@ namespace DEPRECIACION2._0
         private void button5_Click(object sender, EventArgs e)
         {
             BUSCAR_ACTIVO abrir = new BUSCAR_ACTIVO();
+            abrir.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            BUSCAR_UBICACION abrir = new BUSCAR_UBICACION();
+            abrir.Show();
+
+        }
+
+        private void lbRegistros_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new REGISTRO());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BUSCAR_PERSONAL abrir = new BUSCAR_PERSONAL();
             abrir.Show();
         }
 

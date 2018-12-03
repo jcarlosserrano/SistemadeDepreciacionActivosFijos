@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAX5JREFUaEPt2rsvBUEYxuHVUGpcelFRuDQi0Ug0SCQKEqVEJ1qhFwoajY4Wfwml
+        Egmil4hbQuHy+yYh58z51plCznxzzJs8ze7sZt7sLdndoiTD2MYZ7vAZ0TPOsY9ptKBuOnGED2g7teAE
+        gyhNH26gbWyNHKVZ1ESORColvr1hBFU5hjbYumu0wUXON8vXRD3LcNmBNiAVp3CRW6w2IBXvaEf058Rf
+        kDuuuiI1Y1BXpCYXsSYXsSYXsSYXsSYXsSYXsSYXsSYXsSYXseb/FZEXeLuYx1yDrOIR2nx8wUUOESPy
+        FlGbjy+4yDpiRCaozccXXGQNMZKLlGmaInuIkQVo8/EFF3nFEnrR0yCTuIU2H19wEeuaq8hTxYJUDcF9
+        jNdWpqQLxUHFghRdwGUK2oBUbMJF/u2QL6PaIOse0IGfDOAF2mDLFlGTGciDT9vAog2UZhRX0Da04h7q
+        kfDTihXIdSMf47WdxXCJLVRdE6GRPwr6MY6JSORh141fUhRf2A5FnHlA/zIAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

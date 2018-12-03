@@ -47,7 +47,7 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.bienbenido = new System.Windows.Forms.Label();
+            this.lbRegistros = new System.Windows.Forms.Label();
             this.subMenuReportes = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -108,7 +108,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1376, 35);
+            this.panel1.Size = new System.Drawing.Size(1376, 40);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -118,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(41, 6);
+            this.label2.Location = new System.Drawing.Point(41, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(676, 23);
             this.label2.TabIndex = 12;
@@ -183,7 +183,7 @@
             this.panel2.Controls.Add(this.subMenuPersonal);
             this.panel2.Controls.Add(this.submenuActivos);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.bienbenido);
+            this.panel2.Controls.Add(this.lbRegistros);
             this.panel2.Controls.Add(this.subMenuReportes);
             this.panel2.Controls.Add(this.subMenuUbicacion);
             this.panel2.Controls.Add(this.subMenuRubros);
@@ -201,9 +201,9 @@
             this.panel2.Controls.Add(this.btnRubros);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(350, 865);
+            this.panel2.Size = new System.Drawing.Size(350, 860);
             this.panel2.TabIndex = 1;
             // 
             // subMenuPersonal
@@ -265,6 +265,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "Buscar Personal";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // submenuActivos
             // 
@@ -337,16 +338,18 @@
             this.pictureBox4.TabIndex = 15;
             this.pictureBox4.TabStop = false;
             // 
-            // bienbenido
+            // lbRegistros
             // 
-            this.bienbenido.AutoSize = true;
-            this.bienbenido.Font = new System.Drawing.Font("Goudy Stout", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bienbenido.ForeColor = System.Drawing.Color.White;
-            this.bienbenido.Location = new System.Drawing.Point(41, 192);
-            this.bienbenido.Name = "bienbenido";
-            this.bienbenido.Size = new System.Drawing.Size(234, 26);
-            this.bienbenido.TabIndex = 14;
-            this.bienbenido.Text = "BIENBENID@";
+            this.lbRegistros.AutoSize = true;
+            this.lbRegistros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbRegistros.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRegistros.ForeColor = System.Drawing.Color.White;
+            this.lbRegistros.Location = new System.Drawing.Point(100, 196);
+            this.lbRegistros.Name = "lbRegistros";
+            this.lbRegistros.Size = new System.Drawing.Size(125, 22);
+            this.lbRegistros.TabIndex = 14;
+            this.lbRegistros.Text = "REGISTROS";
+            this.lbRegistros.Click += new System.EventHandler(this.lbRegistros_Click);
             // 
             // subMenuReportes
             // 
@@ -523,6 +526,7 @@
             this.button8.TabIndex = 12;
             this.button8.Text = "Buscar Departamento";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // subMenuRubros
             // 
@@ -617,7 +621,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 817);
+            this.label1.Location = new System.Drawing.Point(32, 812);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 23);
             this.label1.TabIndex = 11;
@@ -628,7 +632,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 714);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 709);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 100);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -759,9 +763,9 @@
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
             this.panelContenedor.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(350, 35);
+            this.panelContenedor.Location = new System.Drawing.Point(350, 40);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1026, 865);
+            this.panelContenedor.Size = new System.Drawing.Size(1026, 860);
             this.panelContenedor.TabIndex = 2;
             // 
             // Form1
@@ -848,7 +852,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label bienbenido;
+        private System.Windows.Forms.Label lbRegistros;
         private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

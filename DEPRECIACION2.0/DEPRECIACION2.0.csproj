@@ -49,17 +49,35 @@
     <Compile Include="ACTIVOS.Designer.cs">
       <DependentUpon>ACTIVOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUSCAR PERSONAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSCAR PERSONAL.Designer.cs">
+      <DependentUpon>BUSCAR PERSONAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUSCAR RUBRO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BUSCAR RUBRO.Designer.cs">
       <DependentUpon>BUSCAR RUBRO.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUSCAR UBICACION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSCAR UBICACION.Designer.cs">
+      <DependentUpon>BUSCAR UBICACION.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUSCAR_ACTIVO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BUSCAR_ACTIVO.Designer.cs">
       <DependentUpon>BUSCAR_ACTIVO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DEPRECIACION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPRECIACION.Designer.cs">
+      <DependentUpon>DEPRECIACION.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -102,11 +120,20 @@
     <EmbeddedResource Include="ACTIVOS.resx">
       <DependentUpon>ACTIVOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUSCAR PERSONAL.resx">
+      <DependentUpon>BUSCAR PERSONAL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUSCAR RUBRO.resx">
       <DependentUpon>BUSCAR RUBRO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUSCAR UBICACION.resx">
+      <DependentUpon>BUSCAR UBICACION.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUSCAR_ACTIVO.resx">
       <DependentUpon>BUSCAR_ACTIVO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPRECIACION.resx">
+      <DependentUpon>DEPRECIACION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

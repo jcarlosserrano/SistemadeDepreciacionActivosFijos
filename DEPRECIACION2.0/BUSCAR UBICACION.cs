@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DEPRECIACION2._0
 {
-    public partial class BUSCAR_RUBRO : Form
+    public partial class BUSCAR_UBICACION : Form
     {
         private SqlConnection sqlCon;
         private SqlCommand sqlCmd;
@@ -20,10 +20,10 @@ namespace DEPRECIACION2._0
         private SqlDataAdapter sqlDa;
         private Boolean editando;
 
-
-        public BUSCAR_RUBRO()
+        public BUSCAR_UBICACION()
         {
             InitializeComponent();
+
             String instancia = "CORCHO";
             String bd = "sis325";
 
@@ -39,6 +39,7 @@ namespace DEPRECIACION2._0
                 Application.Exit();
                 //throw;
             }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -46,14 +47,10 @@ namespace DEPRECIACION2._0
             Close();
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
         private void buscar()
         {
-            var query = "select * from rubro WHERE descripcion='" + txtDescripcion.Text + "'";
+            var query = "select * from ubicacion WHERE area='" + txtDescripcion.Text + "'";
             using (SqlCommand cmd = new SqlCommand(query, sqlCon))
             {
                 SqlDataReader read = cmd.ExecuteReader();
@@ -61,11 +58,10 @@ namespace DEPRECIACION2._0
                 {
                     while (read.Read())
                     {
-                        lbCodRubro.Text = read["id_rubro"].ToString();
-                        lbDescripcion.Text = read["descripcion"].ToString();
-                        lbVidaUtil.Text = read["vida_util"].ToString();
-                        lbCoeficiente.Text = read["Porc_DEPRECIACION"].ToString();
-                        lbTotal.Text = read["total"].ToString();
+                        lbCodRubro.Text = read["id_ubicacion"].ToString();
+                        lbDescripcion.Text = read["area"].ToString();
+                        txtDesc.Text = read["descripcionUbicacion"].ToString();
+                        
                     }
                 }
                 else
@@ -76,18 +72,13 @@ namespace DEPRECIACION2._0
             }
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             buscar();
             pnlDescripcion.Visible = true;
-            
-
         }
 
-        private void BUSCAR_RUBRO_Load(object sender, EventArgs e)
-        {
-
-        }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -99,6 +90,11 @@ namespace DEPRECIACION2._0
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

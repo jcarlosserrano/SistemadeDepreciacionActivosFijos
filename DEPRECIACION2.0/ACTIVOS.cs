@@ -94,9 +94,14 @@ namespace DEPRECIACION2._0
         {
             try
             {
+                string dia = dtpFecha.Value.Date.Day.ToString();
+                string mes = dtpFecha.Value.Date.Month.ToString();
+                string anio = dtpFecha.Value.Date.Year.ToString();
+                string fecha = anio +"/"+ mes +"/"+ dia;
+                MessageBox.Show(fecha);
 
                 //if (txtDescripcion.Equals("")){
-                strCmd = "INSERT INTO activoFijo (ID_RUBRO,CODIGO_ACTIVO,DESCRIPCION,MARCA,PROCEDENCIA,COLOR,FECHA_COMPRA,VALOR_COMPRA,ESTADO) VALUES (" + txtRubro.Text + "," + txtCodActivo.Text + ",'" + txtDescripActivo.Text + "','" + txtMarca.Text + "','" + txtProcedencia.Text + "','" + txtColor.Text + "','" + dtpFecha.Value.TimeOfDay.ToString() + "'," + txtValorCompra.Text + ",'" + cmbEstado.Text + "')";
+                strCmd = "INSERT INTO activoFijo (ID_RUBRO,CODIGO_ACTIVO,DESCRIPCION,MARCA,PROCEDENCIA,COLOR,FECHA_COMPRA,VALOR_COMPRA,ESTADO) VALUES (" + txtRubro.Text + "," + txtCodActivo.Text + ",'" + txtDescripActivo.Text + "','" + txtMarca.Text + "','" + txtProcedencia.Text + "','" + txtColor.Text + "','" + fecha +"'," + txtValorCompra.Text + ",'" + cmbEstado.Text + "')";
                 sqlCmd = new SqlCommand(strCmd, sqlCon);
                 sqlCmd.ExecuteNonQuery();
                 MessageBox.Show("REGISTRO INSTERADA EXITOSAMENTE", "Aviso");
@@ -110,7 +115,7 @@ namespace DEPRECIACION2._0
             }
             catch (SqlException)
             {
-                MessageBox.Show(txtRubro.Text + txtCodActivo.Text + txtDescripActivo.Text);
+                MessageBox.Show(txtRubro.Text + txtCodActivo.Text + txtDescripActivo.Text+dtpFecha.Text);
                 MessageBox.Show("no se inserto", "advertencia");
                 return false;
                 // throw;
@@ -168,7 +173,7 @@ namespace DEPRECIACION2._0
                 {
                     while (read.Read())
                     {
-                        MessageBox.Show(read[""].ToString());
+                       // MessageBox.Show(read[""].ToString());
                         respuesta = read[""].ToString();
                     }
                     return respuesta;
@@ -312,6 +317,16 @@ namespace DEPRECIACION2._0
             editar();
             actualizarTabla();
             dataGridView1.DataSource = dt;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
 
         
